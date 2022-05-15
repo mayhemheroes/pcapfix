@@ -1,0 +1,5 @@
+project: pcapfix
+target: pcapfix
+
+cmds:
+  - cmd: /pcapfix -d @@
