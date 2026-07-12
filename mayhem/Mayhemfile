@@ -1,0 +1,10 @@
+project: pcapfix
+target: pcapfix
+
+# In-process libFuzzer harness over pcapfix's repair code path (fix_pcap /
+# fix_pcapng / fix_pcap_kuznetzov). ASan+UBSan halting, built by mayhem/build.sh.
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pcapfix/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_pcapfix
